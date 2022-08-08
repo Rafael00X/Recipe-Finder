@@ -1,0 +1,10 @@
+.search-bar {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.display-card {
+    width: 18rem;
+    height: 20rem;
+    margin-bottom: 5rem;
+}

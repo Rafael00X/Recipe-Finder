@@ -28,13 +28,13 @@ function Search() {
   console.log(results)
 
     return (
-        <div>
-            <form method='get' onSubmit={handleSubmit}>
-                <input type="text" name="query" value={value} placeholder='Enter recipe to search' onChange={(event) => setValue(event.target.value)} />
-                <input type="submit" value="Search" />
+        <div className="container-fluid">
+            <form className="d-flex search-bar" role="search" onSubmit={handleSubmit}>
+                <input name="query" className="form-control" type="search" placeholder="Search" aria-label="Search" value={value} onChange={(event) => setValue(event.target.value)} />
+                <button className="btn btn-outline-success" type="submit">Search</button>
             </form>
 
-            <div>
+            <div className="mb-4">
                 {results && results.map((result, index) => 
                     <DisplayCard key={index} data={result} />
                 )}
