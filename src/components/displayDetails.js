@@ -11,10 +11,6 @@ function displayDetails(result) {
         steps.push(instruction.step);
     })
 
-    console.log(equipments)
-    console.log(ingredients)
-    console.log(steps)
-
     return [steps, ingredients, equipments];
 }
 

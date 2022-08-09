@@ -2,7 +2,7 @@ import DisplayCard from "./DisplayCard";
 
 function ItemGrid(props) {
 
-    const { results, setRecipe } = props;
+    const { results } = props;
     console.log("Item grid")
 
     return (
@@ -12,7 +12,7 @@ function ItemGrid(props) {
                 {results && results.map((result, index) => {
                     return (
                         <div className="col col-md-6 col-lg-auto">
-                            <DisplayCard key={index} data={result} setRecipe={setRecipe} />
+                            <DisplayCard key={index} data={result} />
                         </div>
                     )
                 })}

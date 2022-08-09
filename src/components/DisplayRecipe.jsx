@@ -1,17 +1,14 @@
+import { useLocation } from "react-router-dom";
 import displayDetails from "./displayDetails";
 
-function DisplayRecipe(props) {
-    const { data, setDisplayRecipe } = props;
+function DisplayRecipe() {
+    const data = useLocation().state;
     const { title, image } = data;
     const [ steps, ingredients ] = displayDetails(data);
 
-    console.log(steps);
-    console.log(ingredients);
-
-
     return (
         <div className="container" style={{textAlign: "left"}}>
-            <button onClick={() => setDisplayRecipe(null)}>Back</button>
+            
             <br/>
             <h1>{title}</h1>
             <img src={image} alt="..."/>
