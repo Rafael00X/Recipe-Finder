@@ -1,9 +1,8 @@
 function DisplayCard(props) {
-    console.log("Inside card")
-    console.log(props)
-    const { title, image } = props;
+    const { data, setRecipe } = props;
+    const { title, image } = data;
     return (
-        <div className="display-card card">
+        <div className="display-card card" onClick={() => setRecipe(data)}>
             <img src={image} className="card-img-top" alt="..."/>
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
