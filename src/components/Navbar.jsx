@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -27,13 +27,15 @@ function Navbar() {
   );
 }
 
-// TODO - Active tab, Require login
+// TODO - Require login
 function CustomLink(props) {
   const { to, name } = props;
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
     <li className="nav-item">
-      <Link className="nav-link" to={to}>
+      <Link className={"nav-link" + (isActive ? " active" : "")} to={to}>
         {name}
       </Link>
     </li>
