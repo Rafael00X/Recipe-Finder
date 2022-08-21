@@ -3,9 +3,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import recipeReducer from "./slice/recipeSlice";
 
 const store = configureStore({
-  reducer: {
-    recipe: recipeReducer,
-  },
+    reducer: {
+        recipe: recipeReducer,
+    },
 });
 
 export { store };

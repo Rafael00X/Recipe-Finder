@@ -1,10 +1,26 @@
 .search-bar {
     max-width: 700px;
-    margin: 15px auto;
+    margin: 10px auto;
 }
 
 .display-card {
     width: 18rem;
     height: 20rem;
     margin-bottom: 5rem;
+    padding: 0.5rem;
+}
+
+.display-card img {
+    width: 17rem;
+    height: 12rem;
+    object-fit: fill;
+}
+
+.item-grid {
+    margin-top: 15px;
+}
+
+.load-btn {
+    margin-bottom: 20px;
+    width: 100%;
 }

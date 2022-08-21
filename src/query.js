@@ -1,18 +1,21 @@
 import axios from "axios";
-import { urlBuilder } from "./util";
+import { buildUrl } from "./util";
 
-function fetchData(params, callback) {    
-    const url = urlBuilder(params);
-    //const url = "https://api.spoonacular.com/recipes/complexSearch?query=pasta&maxFat=25&number=2&addRecipeInformation=true";
+function fetchData(params, callback) {
+    console.log(params)
+    const url = buildUrl(params);
     console.log(url)
-    axios.get(url)
+    axios
+        .get(url)
         .then((res) => {
-            console.log(res)
-            callback(res.data.results)
-            
+            const result = {
+                recipes: res.data.results,
+                totalResults: res.data.totalResults
+            }
+            callback(result);
         })
         .catch((err) => {
-            console.log(err)
+            console.log(err);
         });
 }
 
