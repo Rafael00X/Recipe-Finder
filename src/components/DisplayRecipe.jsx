@@ -14,15 +14,15 @@ function DisplayRecipe() {
             <hr />
             <h2>Ingredients</h2>
             <ol>
-                {ingredients.map((ingredient) => (
-                    <li>{ingredient.name}</li>
+                {ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient.name}</li>
                 ))}
             </ol>
             <hr />
             <h2>Steps</h2>
             <ol>
-                {steps.map((step) => (
-                    <li>{step}</li>
+                {steps.map((step, index) => (
+                    <li key={index}>{step}</li>
                 ))}
             </ol>
         </div>

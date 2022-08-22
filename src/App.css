@@ -1,5 +1,44 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 .App {
   text-align: center;
 }
 
-@import url("css/Home.css");
+.search-bar {
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.display-card {
+  width: 18rem;
+  height: 20rem;
+  margin-bottom: 5rem;
+  padding: 0.5rem;
+}
+
+.display-card img {
+  width: 17rem;
+  height: 12rem;
+  object-fit: fill;
+}
+
+.item-grid {
+  margin-top: 15px;
+}
+
+.load-btn {
+  margin-bottom: 20px;
+  width: 100%;
+}

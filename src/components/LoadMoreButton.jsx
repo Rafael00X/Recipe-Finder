@@ -13,18 +13,14 @@ function LoadMoreButton() {
     if (recipeCount === totalResults) return;
 
     const handleClick = () => {
-        console.log(`Before query, searchString = ${searchString}`)
         fetchData({ query: searchString, addRecipeInformation: true, number: 12, offset: recipeCount }, (res) => {
-            console.log("From LoadMoreButton")
-            console.log(res)
-            dispatch(add({ ...res, searchString }))
-        }
-        );
+            dispatch(add({ ...res, searchString }));
+        });
     };
 
     return (
-        <button className="btn btn-outline-success load-btn" onClick={handleClick}>
-            Load More
+        <button className="btn btn-success load-btn" onClick={handleClick}>
+            Load More Results
         </button>
     );
 }

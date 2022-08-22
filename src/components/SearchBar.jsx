@@ -31,7 +31,7 @@ function SearchBar() {
                     onChange={(event) => setValue(event.target.value)}
                 />
 
-                <button className="btn btn-outline-success" type="submit">
+                <button className="btn btn-success" type="submit">
                     Search
                 </button>
             </form>

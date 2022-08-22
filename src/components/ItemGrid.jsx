@@ -5,21 +5,25 @@ import LoadMoreButton from "./LoadMoreButton";
 
 function ItemGrid() {
     const { recipes } = useSelector((state) => {
-        console.log(state.recipe)
         return state.recipe;
     });
 
     if (!recipes) return;
 
-    if (recipes.length === 0) return <h2>No match found</h2>;
+    if (recipes.length === 0)
+        return (
+            <div className="search-error">
+                <h2>No match found</h2>
+            </div>
+        )
 
     return (
         <div className="container item-grid">
             <div className="row">
                 {recipes.map((recipe, index) => {
                     return (
-                        <div className="col col-md-6 col-lg-auto">
-                            <DisplayCard key={index} data={recipe} />
+                        <div key={index} className="col col-md-6 col-lg-auto">
+                            <DisplayCard data={recipe} />
                         </div>
                     );
                 })}
