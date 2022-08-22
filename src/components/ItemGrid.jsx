@@ -19,10 +19,10 @@ function ItemGrid() {
 
     return (
         <div className="container item-grid">
-            <div className="row">
+            <div className="row d-flex justify-content-center">
                 {recipes.map((recipe, index) => {
                     return (
-                        <div key={index} className="col col-md-6 col-lg-auto">
+                        <div key={index} className="col col-md-6 col-lg-auto d-flex justify-content-center">
                             <DisplayCard data={recipe} />
                         </div>
                     );

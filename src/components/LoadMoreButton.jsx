@@ -19,7 +19,7 @@ function LoadMoreButton() {
     };
 
     return (
-        <button className="btn btn-success load-btn" onClick={handleClick}>
+        <button className="btn btn-green load-btn" onClick={handleClick}>
             Load More Results
         </button>
     );

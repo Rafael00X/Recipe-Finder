@@ -21,7 +21,29 @@ function SearchBar() {
     return (
         <div className="container-fluid">
             <form className="d-flex search-bar" role="search" onSubmit={handleSubmit} action="/">
-                <input
+                <div class="input-group">
+                    <input
+                        name="query"
+                        className="form-control"
+                        type="text"
+                        placeholder="Search"
+                        aria-label="Search"
+                        value={value}
+                        onChange={(event) => setValue(event.target.value)}
+                    />
+                    <button className="btn btn-green" type="submit">
+                        Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+}
+
+export default SearchBar;
+
+/*
+<input
                     name="query"
                     className="form-control"
                     type="search"
@@ -34,9 +56,4 @@ function SearchBar() {
                 <button className="btn btn-success" type="submit">
                     Search
                 </button>
-            </form>
-        </div>
-    );
-}
-
-export default SearchBar;
+                */
